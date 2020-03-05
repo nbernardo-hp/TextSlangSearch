@@ -19,7 +19,6 @@ namespace TextSlangSearch
          * indicate the term was not found*/
         public int searchAbbreviation(string userEntry)
         {
-            int index = -1;
             for(int i = 0; i < slangAbbreviation.Length; i++)
             {
                 if(userEntry.Equals(slangAbbreviation[i].ToLower()))
@@ -27,7 +26,7 @@ namespace TextSlangSearch
                     return i;
                 }
             }
-            return index;
+            return -1;
         }
 
         /*Searches the meaning array to determine if the user input is contained in the array.
@@ -35,7 +34,6 @@ namespace TextSlangSearch
          * indicate the term was not found*/
         public int searchMeaning(string userEntry)
         {
-            int index = -1;
             for (int i = 0; i < slangMeaning.Length; i++)
             {
                 if (userEntry.Equals(slangMeaning[i].ToLower()))
@@ -43,7 +41,7 @@ namespace TextSlangSearch
                     return i;
                 }
             }
-            return index;
+            return -1;
         }
 
         /*Searches through the arrays if no exact match was found as entries in the arrays.
