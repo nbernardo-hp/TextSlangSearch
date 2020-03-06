@@ -42,5 +42,10 @@ namespace TextSlangSearch
         {
             return Convert.ToInt32(dgvSimilar.SelectedRows[0].Cells[0].Value);
         }
+        
+        private void dgvSimilar_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            btnOK.PerformClick();
+        }
     }
 }
